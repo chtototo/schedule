@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: Montserrat;
+        font-weight: 500;
+    }
+}
+
+#app {
+    @apply w-full relative 
+}
+
+body {
+    @apply overflow-x-hidden h-[100vh] bg-zinc-800 text-zinc-500
+}
+
+body::-webkit-scrollbar {
+    @apply w-[12px]
+}
+
+body::-webkit-scrollbar-track {
+    @apply bg-transparent
+}
+
+body::-webkit-scrollbar-thumb {
+    @apply bg-zinc-700 rounded-full
+}
+
+.select {
+    @apply border-[1px] border-blue-900 rounded w-[500px] h-[50px] outline-none text-zinc-700 px-[8px]
+}
+
+label {
+    @apply mb-[10px] font-[600]
+}
+
+.option {
+    @apply cursor-pointer hover:opacity-[.8] h-[30px]
+}
+
+.options {
+    @apply bg-white w-[500px] p-[8px] rounded border-[1px] border-black absolute top-[90px] z-[1000]
+}
