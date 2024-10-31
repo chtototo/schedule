@@ -45,5 +45,49 @@ label {
 }
 
 .options {
-    @apply bg-white w-[500px] p-[8px] rounded border-[1px] border-black absolute top-[90px] z-[1000]
+    @apply bg-white w-[300px] p-[8px] rounded border-[1px] border-black absolute top-[90px] z-[1000] h-fit
+}
+
+.weekName {
+    @apply text-zinc-200 text-[20px] border-b-[1px] h-fit
+}
+
+.week {
+    @apply grid grid-rows-6 gap-[20px] w-[47%] absolute top-[50px]
+}
+
+.days {
+    @apply flex flex-col
+}
+
+.day {
+    @apply flex flex-col
+}
+
+.day-name {
+    @apply border-b-[1px] text-zinc-300 h-fit mb-[10px]
+}
+
+.subjects {
+    @apply border-b-[1px] border-zinc-700 flex flex-row w-full text-zinc-700 h-[150px]
+}
+
+/* .subject {
+    @apply flex flex-row ml-[10px] w-full justify-between
+}
+
+.subject-name {
+    @apply text-zinc-400
+}
+
+.subject-info {
+    @apply flex flex-row justify-between text-zinc-500 text-[15px] w-full ml-[20px]
+}
+*/
+.subject-index {
+    @apply text-zinc-300
+} 
+
+.subject {
+    @apply bg-zinc-300 w-full rounded-xl p-[10px_15px] leading-[20px] mb-[10px] ml-[10px] border-l-[10px] border-indigo-400
 }
