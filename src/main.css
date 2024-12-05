@@ -13,31 +13,31 @@
 }
 
 #app {
-    @apply w-full relative 
+    @apply w-full relative overflow-x-hidden h-[100vh] bg-zinc-800 text-zinc-500 flex flex-row
 }
 
-body {
-    @apply overflow-x-hidden h-[100vh] bg-zinc-800 text-zinc-500
-}
-
-body::-webkit-scrollbar {
+#app::-webkit-scrollbar {
     @apply w-[12px]
 }
 
-body::-webkit-scrollbar-track {
+#app::-webkit-scrollbar-track {
     @apply bg-transparent
 }
 
-body::-webkit-scrollbar-thumb {
+#app::-webkit-scrollbar-thumb {
     @apply bg-zinc-700 rounded-full
 }
 
-.select {
-    @apply border-[1px] border-blue-900 rounded w-[500px] h-[50px] outline-none text-zinc-700 px-[8px]
+main {
+    @apply flex flex-row justify-between w-full h-full relative ml-[80px]
 }
 
 label {
-    @apply mb-[10px] font-[600]
+    @apply font-[600]
+}
+
+.select {
+    @apply border-[1px] border-blue-900 rounded outline-none text-zinc-700 px-[8px] absolute
 }
 
 .option {
@@ -45,49 +45,69 @@ label {
 }
 
 .options {
-    @apply bg-white w-[300px] p-[8px] rounded border-[1px] border-black absolute top-[90px] z-[1000] h-fit
+    @apply bg-white w-[300px] p-[8px] rounded border-[1px] border-black
+}
+
+.sidebar {
+    @apply bg-zinc-900 w-[50px] h-full fixed left-0 top-0
+}
+
+.schedule-container {
+    @apply absolute right-0 grid grid-cols-2 gap-[30px] w-[60vw]
+}
+
+.inputs-container {
+    @apply fixed top-0 bottom-0 my-auto h-[200px] flex flex-col justify-between
+}
+
+.input-container {
+    /* @apply relative */
+}
+
+.inputs {
+    /* @apply    */
+}
+
+.input {
+    @apply bg-white rounded cursor-pointer w-[30vw] h-[40px] flex flex-col justify-center pl-[10px]
+}
+
+.btn {
+    @apply uppercase rounded-full bg-gradient-to-r from-blue-400 to-indigo-400 text-zinc-300 shadow-md hover:opacity-[.8] mt-[10px] transition-[.3s] outline-none w-[120px] h-[40px]
 }
 
 .weekName {
-    @apply text-zinc-200 text-[20px] border-b-[1px] h-fit
+    @apply text-zinc-200 text-[20px] border-b-[1px]
 }
 
 .week {
-    @apply grid grid-rows-6 gap-[20px] w-[47%] absolute top-[50px]
+    @apply flex flex-col
+}
+
+.weekdays {
+    @apply flex flex-col
 }
 
 .days {
-    @apply flex flex-col
+    /* @apply   */
 }
 
 .day {
-    @apply flex flex-col
+    /* @apply   */
 }
 
 .day-name {
-    @apply border-b-[1px] text-zinc-300 h-fit mb-[10px]
+    @apply border-b-[1px] text-zinc-300
 }
 
 .subjects {
-    @apply border-b-[1px] border-zinc-700 flex flex-row w-full text-zinc-700 h-[150px]
+    @apply border-b-[1px] border-zinc-700    text-zinc-700 
 }
 
-/* .subject {
-    @apply flex flex-row ml-[10px] w-full justify-between
-}
-
-.subject-name {
-    @apply text-zinc-400
-}
-
-.subject-info {
-    @apply flex flex-row justify-between text-zinc-500 text-[15px] w-full ml-[20px]
-}
-*/
 .subject-index {
     @apply text-zinc-300
 } 
 
 .subject {
-    @apply bg-zinc-300 w-full rounded-xl p-[10px_15px] leading-[20px] mb-[10px] ml-[10px] border-l-[10px] border-indigo-400
+    @apply bg-zinc-300 rounded-xl leading-[20px] border-l-[10px] justify-between p-[15px]
 }
